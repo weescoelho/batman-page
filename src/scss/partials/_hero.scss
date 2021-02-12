@@ -13,14 +13,52 @@
     font-size:1.8rem;
     color:$gray;
     margin-bottom: 16px;
+    line-height:1.5;
   }
 }
 
 .title span{
   color: $red;
+  display: inline-block;
+}
+
+.subtitle {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  h1{
+    font-size:10rem;
+    letter-spacing: 0.3rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  p{
+    max-width: 600px;
+    font-size:1.8rem;
+    color:$gray;
+    margin-bottom: 16px;
+    line-height:1.5;
+  }
+}
+
+.subtitle span{
+  color: $red;
+  display: inline-block;
 }
 
 .dc-logo{
-  position:absolute;
-  bottom:5%;
+  margin-top: 64px;
+}
+
+  .bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content:center;
 }

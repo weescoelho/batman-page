@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="src/css/fullpage.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <script src="src/js/svg-inject.min.js"></script>
@@ -14,62 +13,49 @@
 </head>
 
 <body>
-  <div id="fullPage">
-    <div class="section active s1">
-      <!-- BG Loader -->
-      <section class="bg-loader">
-        <svg style="max-width: 170px;" width="174" height="72" viewBox="0 0 174 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="logo-batman" d="M31.6699 43.2703C54.5738 32.1005 78.755 39.8707 87 70C95.8958 41.6385 115.309 31.8488 142.745 43.2703C139.165 32.2134 158.025 29.2128 173 51.5586C159.817 24.5762 148.719 13.5671 122.436 1C121.533 13.1268 113.979 14.9572 96.947 15.7117C94.9091 12.2287 94.4232 10.0206 93.8386 5.97297L91.1446 10.5315H83.0627L80.1614 5.97297C79.9188 9.96592 79.6159 12.1654 77.4675 15.7117C56.4124 14.8897 53.2191 10.5533 51.5639 1C23.9944 14.9025 13.637 26.4866 1 51.5586C13.343 32.7107 34.064 29.1951 31.6699 43.2703Z" fill="black" stroke="black" />
-        </svg>
-      </section>
-      <!-- Header -->
-      <header>
-        <div class="logo"><img src="src/assets/svg/logo-1.svg" onload="SVGInject(this)" /></div>
-        <nav>
-          <ul class="nav-menu">
-            <li><a href="#"">Home</a></li>
-      <li><a href=" #">History</a></li>
-            <li><a href="#">Wallpaper</a></li>
-            <li><a href="#">Games</a></li>
-          </ul>
-        </nav>
-      </header>
-      <section class="container">
-        <div class="title">
-          <div>
-            <h1>THE BAT<span>MAN</span></h1>
-          </div>
-          <p class="description">Batman is a superhero who appears in American comic books published by DC Comics. Batman was created by artist Bob Kane and writer Bill Finger, and debuted in the 27th issue of the comic book Detective Comics on March 30, 1939.</p>
-          <div class="btn">
-            <a href="#" class="btn-primary">History</a>
-            <a href="#" class="btn-secondary">Trailers</a>
-          </div>
-          <img class="dc-logo" src="src/assets/svg/dc-logo.svg" onload="SVGInject(this)" />
-        </div>
-      </section>
-    </div>
 
-    <div class="section s2">
-      <div class="container">
-        <div class="title">
-          <div>
-            <h1 class="title">HIS<span>TORY</span></h1>
-          </div>
-          <p class="description">Batman is a superhero who appears in American comic books published by DC Comics. Batman was created by artist Bob Kane and writer Bill Finger, and debuted in the 27th issue of the comic book Detective Comics on March 30, 1939.</p>
+  <div class="bg-hero">
+    <!-- BG Loader -->
+    <section class="bg-loader">
+      <svg style="max-width: 170px;" width="174" height="72" viewBox="0 0 174 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="logo-batman" d="M31.6699 43.2703C54.5738 32.1005 78.755 39.8707 87 70C95.8958 41.6385 115.309 31.8488 142.745 43.2703C139.165 32.2134 158.025 29.2128 173 51.5586C159.817 24.5762 148.719 13.5671 122.436 1C121.533 13.1268 113.979 14.9572 96.947 15.7117C94.9091 12.2287 94.4232 10.0206 93.8386 5.97297L91.1446 10.5315H83.0627L80.1614 5.97297C79.9188 9.96592 79.6159 12.1654 77.4675 15.7117C56.4124 14.8897 53.2191 10.5533 51.5639 1C23.9944 14.9025 13.637 26.4866 1 51.5586C13.343 32.7107 34.064 29.1951 31.6699 43.2703Z" fill="black" stroke="black" />
+      </svg>
+    </section>
+    <!-- Header -->
+    <header>
+      <div class="logo"><img src="src/assets/svg/logo-1.svg" onload="SVGInject(this)" /></div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#"">Home</a></li>
+      <li><a href=" #">History</a></li>
+          <li><a href="#">Wallpaper</a></li>
+          <li><a href="#">Games</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="bg-video">
+      <video class="video" autoplay muted loop>
+        <source src="src/assets/videos/batman.mp4">
+      </video>
+    </section>
+
+    <section class="container">
+      <div class="title">
+        <div>
+          <h1>THE BAT<span>MAN</span></h1>
+        </div>
+        <p class="description">Batman is a superhero who appears in American comic books published by DC Comics. Batman was created by artist Bob Kane and writer Bill Finger, and debuted in the 27th issue of the comic book Detective Comics on March 30, 1939.</p>
+        <div class="btn">
+          <a href="#" class="btn-primary">History</a>
+          <a href="#" class="btn-secondary">Trailers</a>
+        </div>
+        <div class="dc-logo"><img src="src/assets/svg/dc-logo.svg" onload="SVGInject(this)" /></div>
       </div>
-    </div>
-    <div class="section s3">
-      <h2>Teste</h2>
-    </div>
-    <div class="section s4">
-      <h2>Teste</h2>
-    </div>
+    </section>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous"></script>
-
-  <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
-  <script type="text/javascript" src="src/js/fullpage.js"></script>
   <script src="src/js/app.js"></script>
 </body>
 

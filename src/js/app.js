@@ -16,6 +16,4 @@ new fullpage('#fullPage', {
   autoScrolling:true,
   navigation:true,
   navigationPosition: 'left',
-  navigationTooltips: ['Home', 'History', 'Wallpapers', 'Games'],
-  anchors:['Home', 'History', 'Wallpapers', 'Games']
 })
