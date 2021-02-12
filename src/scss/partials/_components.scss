@@ -1,5 +1,8 @@
 :root {
   font-size: 62.5%;
+  @include responsive-mobile(){
+    font-size:60%;
+  }
 }
 
 .container {
@@ -10,6 +13,9 @@
   align-items: center;
   overflow: hidden;
   height: 85vh;
+  @include responsive-mobile(){
+    max-width:400px;
+  }
 }
 
 // .bg-hero {

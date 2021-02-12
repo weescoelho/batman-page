@@ -12,8 +12,12 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 })
 
-new fullpage('#fullPage', {
-  autoScrolling:true,
-  navigation:true,
-  navigationPosition: 'left',
-})
+const mobileBtn = document.querySelector('.bx');
+const mobileMenu = document.querySelector('.nav-menu-mobile')
+
+function handleMobileMenu(event){
+  mobileMenu.classList.toggle('active')
+  mobileBtn.classList.toggle('active')
+}
+
+mobileBtn.addEventListener('click', handleMobileMenu)

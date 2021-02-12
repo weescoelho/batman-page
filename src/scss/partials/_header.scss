@@ -7,6 +7,7 @@ header {
   margin: 0 auto;
 }
 
+
 .nav-menu {
   display: flex;
   li {
@@ -47,7 +48,59 @@ header {
       animation: anim-link .5s ease forwards;
     }
   }
+  @include responsive-mobile(){
+    display: none;
+  }
 }
+
+.nav-menu-mobile{
+  display: none;
+  background:$gray;
+  width:100%;
+  height:50vh;
+  z-index: 999;
+  text-align: center;
+  @include responsive-mobile(){
+    display: none;
+    position:absolute;
+    top:120px;
+    left: 0;
+    flex-direction:column;
+    justify-content: center;
+    margin: 0 auto;
+    transition: .7s ease;
+    li{
+      padding: 20px 40px;
+      a{
+        text-decoration: none;
+        font-size: 1.8rem;
+        color:#fff;
+      }
+    }
+  }
+}
+
+.nav-menu-mobile.active{
+  display: flex;
+  animation: anim-menu .7s ease forwards;
+}
+
+@keyframes anim-menu{
+  from{
+    opacity: 0;
+    transform: translate3d(0,-50px,0);
+    height:0vh;
+  }
+  to{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+    height:50vh;
+  }
+}
+
+
+
+
 
 @keyframes anim-link{
   from{
@@ -58,4 +111,50 @@ header {
     opacity: 1;
     width:35px
   }
+}
+
+.bx {
+  @include responsive-mobile() {
+    display: block;
+  }
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 70%;
+    height: 15%;
+
+    background-color: $red;
+    transition: 1s ease;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 40%;
+    height: 15%;
+
+    background-color: $red;
+    transition: 1s ease;
+  }
+}
+
+.bx.active::after {
+  transform: rotate(225deg);
+  top: 45%;
+}
+
+.bx.active::before {
+  transform: rotate(-225deg);
+  top: 45%;
+  left:15%;
+  width: 70%;
+  height: 15%;
 }

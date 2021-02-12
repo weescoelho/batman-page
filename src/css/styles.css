@@ -293,6 +293,12 @@ body {
   font-size: 62.5%;
 }
 
+@media screen and (max-width: 739px) {
+  :root {
+    font-size: 60%;
+  }
+}
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -308,6 +314,12 @@ body {
           align-items: center;
   overflow: hidden;
   height: 85vh;
+}
+
+@media screen and (max-width: 739px) {
+  .container {
+    max-width: 400px;
+  }
 }
 
 .btn-primary {
@@ -507,6 +519,86 @@ header {
           animation: anim-link .5s ease forwards;
 }
 
+@media screen and (max-width: 739px) {
+  .nav-menu {
+    display: none;
+  }
+}
+
+.nav-menu-mobile {
+  display: none;
+  background: #272727;
+  width: 100%;
+  height: 50vh;
+  z-index: 999;
+  text-align: center;
+}
+
+@media screen and (max-width: 739px) {
+  .nav-menu-mobile {
+    display: none;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+    -webkit-transition: .7s ease;
+    transition: .7s ease;
+  }
+  .nav-menu-mobile li {
+    padding: 20px 40px;
+  }
+  .nav-menu-mobile li a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #fff;
+  }
+}
+
+.nav-menu-mobile.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: anim-menu .7s ease forwards;
+          animation: anim-menu .7s ease forwards;
+}
+
+@-webkit-keyframes anim-menu {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0);
+            transform: translate3d(0, -50px, 0);
+    height: 0vh;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    height: 50vh;
+  }
+}
+
+@keyframes anim-menu {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50px, 0);
+            transform: translate3d(0, -50px, 0);
+    height: 0vh;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    height: 50vh;
+  }
+}
+
 @-webkit-keyframes anim-link {
   from {
     opacity: 0;
@@ -529,6 +621,59 @@ header {
   }
 }
 
+.bx {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  position: relative;
+}
+
+@media screen and (max-width: 739px) {
+  .bx {
+    display: block;
+  }
+}
+
+.bx::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 70%;
+  height: 15%;
+  background-color: #671114;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.bx::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  width: 40%;
+  height: 15%;
+  background-color: #671114;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.bx.active::after {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  top: 45%;
+}
+
+.bx.active::before {
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+  top: 45%;
+  left: 15%;
+  width: 70%;
+  height: 15%;
+}
+
 .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -547,6 +692,12 @@ header {
   letter-spacing: 0.3rem;
   font-weight: bold;
   margin-bottom: 16px;
+}
+
+@media screen and (max-width: 739px) {
+  .title h1 {
+    font-size: 5.5rem;
+  }
 }
 
 .title p {

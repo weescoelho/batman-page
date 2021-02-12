@@ -1,0 +1,11 @@
+@mixin responsive-mobile(){
+  @media screen and (max-width:739px){
+    @content;
+  }
+}
+
+@mixin responsive-tablet(){
+  @media (max-width:739px) and (max-width:979px){
+    @content;
+  }
+}
