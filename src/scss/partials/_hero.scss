@@ -1,0 +1,26 @@
+.title {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  h1{
+    font-size:10rem;
+    letter-spacing: 0.3rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  p{
+    max-width: 600px;
+    font-size:1.8rem;
+    color:$gray;
+    margin-bottom: 16px;
+  }
+}
+
+.title span{
+  color: $red;
+}
+
+.dc-logo{
+  position:absolute;
+  bottom:5%;
+}

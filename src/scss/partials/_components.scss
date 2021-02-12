@@ -1,0 +1,140 @@
+:root {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  height: 85vh;
+}
+
+.s1 {
+  background-image: url(../assets/images/bg-body.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.s2 {
+  background-image: url(../assets/images/bg-body2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.s3 {
+  background-image: url(../assets/images/bg-body3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.s4 {
+  background-image: url(../assets/images/bg-body4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.btn-primary {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  border: 2px solid $gray;
+  transform: skew(10deg);
+  padding: 14px 32px;
+  margin-left: 6px;
+  color: $gray;
+  margin-top: 32px;
+  border-radius:2px;
+  transition: .7s ease;
+  &::after{
+    content:'';
+    position:absolute;
+    display: block;
+    height:48px;
+    width:139px;
+    background:$red;
+    top:-1px;
+    right:-2px;
+    border-radius:2px;
+    z-index: -1;
+    opacity: 0;
+    transition: .7s ease;
+  }
+  &:hover{
+    border: 2px solid $gray-light;
+    color:#fff;
+    &::after{
+      opacity: 1;
+      animation:anim .5s ease forwards;
+    }
+  }
+}
+
+@keyframes anim{
+  from{
+    opacity: 0;
+    width:0;
+  }
+  to{
+    opacity: 1;
+    width:139px;
+  }
+}
+
+.btn-secondary {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  border: 2px solid $gray;
+  transform: skew(10deg);
+  padding: 14px 32px;
+  margin-left: 16px;
+  color: #fff;
+  background: $gray;
+  border-radius: 2px;
+  margin-top: 32px;
+  position: relative;
+  z-index: 1;
+  transition: .7s ease;
+  border-radius:2px;
+  &::after{
+    content:'';
+    position:absolute;
+    display: block;
+    width:30%;
+    height:100%;
+    border-right:5px solid $red;
+    border-top:5px solid $red;
+    top:-15%;
+    right:-4%;
+    border-radius:2px;
+    opacity: 0;
+    transition: .7s ease;
+  }
+  &:hover{
+    &::after{
+      opacity: 1;
+      animation:anim .5s ease forwards;
+    }
+  }
+
+}
+
+.bg-loader{
+  width:100%;
+  height:100vh;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index: 999;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  background:$yellow;
+  overflow:hidden;
+}
